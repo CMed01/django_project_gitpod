@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-scw__f52q#p0gv!s77+d6b&hh48mdg@1ul&5+@dhpeq5g7qfn=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-cmed01-djangoprojectgit-v18ring92q6.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['8000-cmed01-djangoprojectgit-5qm3zs2e7pd.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello_world',
+    'about',
 ]
 
 MIDDLEWARE = [
