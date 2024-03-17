@@ -26,6 +26,20 @@ class Post(models.Model):
     # python3 manage.py makemigrations "name of app" --> this wil create migrations folder
     # python3 manage.py migrate "name of app" --> to run the migration
 
+    # META DATA
+    # always added after the fields
+    # meta class is data about data. This is data that is not a field
+    # We can use these classes to add functionailty, even calculate fields
+    class Meta:
+        ordering = ["-created_on"]
+
+    # We can add methods to Classes
+    # These need to be added after meta classes
+    def __str__(self):
+        # Note the use of f string here to insert text followed by
+        # self.title, this will refer to the item number and title
+        return f"{self.title} | written by {self.author}"
+
 
 class Comment(models.Model):
     # Link te post to the Post model
@@ -41,3 +55,9 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Comment: {self.body} by {self.author}"
