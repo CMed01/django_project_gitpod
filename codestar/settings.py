@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-cmed01-djangoprojectgit-5qm3zs2e7pd.ws-eu108.gitpod.io',
+ALLOWED_HOSTS = ['8000-cmed01-djangoprojectgit-5qm3zs2e7pd.ws-eu110.gitpod.io',
                 '.herokuapp.com']
 
 # Application definition
@@ -91,7 +91,7 @@ DATABASES = {
 }
 
 # This is a list of trusted origins for requests. Need to add both local and deployment URLS
-# ALlowing you to add blog post content from the admin dashboard.
+# Allowing you to add blog post content from the admin dashboard.
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io",
     "https://*.herokuapp.com"

@@ -10,7 +10,7 @@ class Post(models.Model):
     # Slug is a short name for article still under production
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        # One user can create manay posts
+        # One user can create many posts
         # This comment allows the deletion of all posts, if the user entry
         # is deleted then all post will be deleted
         User, on_delete=models.CASCADE, related_name="blog_posts"
@@ -19,3 +19,9 @@ class Post(models.Model):
     # created on puts the date and time the blod was posted at
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    excerpt = models.TextField(blank=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    # To migrate model to data structure
+    # python3 manage.py makemigrations "name of app" --> this wil create migrations folder
+    # python3 manage.py migrate "name of app" --> to run the migration

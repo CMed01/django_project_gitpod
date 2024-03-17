@@ -27,3 +27,7 @@ class Migration(migrations.Migration):
             ],
         ),
     ]
+
+    # python3 manage.py makemigrations --dry-run
+    # The above code can preview (dry run) a migration
+    # Still need to run makemigrations when happy.
