@@ -25,3 +25,19 @@ class Post(models.Model):
     # To migrate model to data structure
     # python3 manage.py makemigrations "name of app" --> this wil create migrations folder
     # python3 manage.py migrate "name of app" --> to run the migration
+
+
+class Comment(models.Model):
+    # Link te post to the Post model
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments"
+    )
+    author = models.ForeignKey(
+        # One user can create many posts
+        # This comment allows the deletion of all posts, if the user entry
+        # is deleted then all post will be deleted
+        User, on_delete=models.CASCADE, related_name="commenter"
+    )
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
