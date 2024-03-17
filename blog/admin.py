@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment
 
 # Register your models here.
 
@@ -8,3 +8,4 @@ from .models import Post
 # as there are more fields to be added to the tables in an upcoming topic.
 
 admin.site.register(Post)
+admin.site.register(Comment)
