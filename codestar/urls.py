@@ -19,7 +19,7 @@ from django.urls import path, include
 from about import views as about_views
 
 urlpatterns = [
-    path("", include("blog.urls"), name="blog-urls"),
+    path('', include("blog.urls"), name="blog-urls"),
     path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
 ]
