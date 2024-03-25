@@ -25,3 +25,13 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
 
 - Once installed
     - python3 manage.py collectstatic
+
+## Migration
+- To migrate model to data structure
+    - python3 manage.py makemigrations "name of app" --> this wil create migrations folder
+    - python3 manage.py migrate "name of app" --> to run the migration
+
+# META DATA
+- Always added after the fields
+- Meta class is data about data. This is data that is not a field
+- We can use these classes to add functionailty, even calculate fields
