@@ -1,6 +1,7 @@
 # Notes
 
-- pip3 freeze --local > requirements.txt
+- This codes adds an new installations to the requirements.txt file
+    - pip3 freeze --local > requirements.txt
 
 ## Database
 
@@ -35,3 +36,11 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
 - Always added after the fields
 - Meta class is data about data. This is data that is not a field
 - We can use these classes to add functionailty, even calculate fields
+
+# ALLAUTH
+- Install app
+- Update requirements
+- Updated settings.py
+    - INSTALLED APPS
+    - MIDDLEWARE
+- Be sure to migrate when done.
