@@ -44,3 +44,8 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
     - INSTALLED APPS
     - MIDDLEWARE
 - Be sure to migrate when done.
+- pip3 show django-allauth
+    - this shows the details including the location of the alltuh folder
+    - Copy the location and insert it into the following code in the terminal
+        - cp -r < template >/allauth/templates/* ./templates/
+        - This will create a new folder
