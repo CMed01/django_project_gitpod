@@ -49,3 +49,6 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
     - Copy the location and insert it into the following code in the terminal
         - cp -r < template >/allauth/templates/* ./templates/
         - This will create a new folder
+
+# Crispy Forms
+- pip3 install django-crispy-forms~=2.0 crispy-bootstrap5~=0.7
