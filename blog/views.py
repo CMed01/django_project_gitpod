@@ -74,6 +74,8 @@ def comment_edit(request, slug, comment_id):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
+        # By specifying instance=comment, any changes made to the form 
+        # will be applied to the existing Comment, instead of creating a new one.
         comment_form = CommentForm(data=request.POST, instance=comment)
 
         if comment_form.is_valid() and comment.author == request.user:
@@ -93,6 +95,7 @@ def comment_delete(request, slug, comment_id):
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
+    # pk is shorthand for primary key. I.e. if the pk is the same as the comment_id!!
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
