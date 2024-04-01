@@ -55,3 +55,9 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
 
 # Clouidnary
 - pip3 cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15
+- The only prerequisites to this efficient system are:
+    - The Cloudinary package installed in our Django project.
+    - Utilize the CloudinaryField in the relevant model.
+    - Ensure the CLOUDINARY_URL API key is available in our project environment.
+
+    - It's important to understand that to retrieve the Cloudinary image URL, we use the .url attribute with the post.featured_image field
