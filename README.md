@@ -87,3 +87,11 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
         - use the same reference as model class. 
         - Also reference where the data is retrieved from.
     - REMOVE ALL PRINT CODES!!
+
+# Useful Links
+- The W3C Markup validation service
+    - https://validator.w3.org/#validate_by_uri
+- CI Python Linter
+    - https://pep8ci.herokuapp.com/
+- PEP 257 – Docstring Conventions
+    - https://peps.python.org/pep-0257/
