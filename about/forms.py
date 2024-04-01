@@ -1,6 +1,5 @@
-from .models import CollaborateRequest
 from django import forms
-
+from .models import CollaborateRequest
 
 # We have passed the django forms.ModelForm into the CommentForm
 # This is an inbuilt in Django forms

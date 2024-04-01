@@ -1,6 +1,5 @@
-from .models import Comment
 from django import forms
-
+from .models import Comment
 
 # We have passed the django forms.ModelForm into the CommentForm
 # This is an inbuilt in Django forms

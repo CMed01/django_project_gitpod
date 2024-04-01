@@ -6,6 +6,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 class Post(models.Model):
+    """
+    Stores a single blog post entry related to :model:`auth.User`.
+    """
     # Title values should be unique to avoid duplication
     title = models.CharField(max_length=200, unique=True)
     # Slug is a short name for article still under production
@@ -44,6 +47,10 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Stores a single comment entry related to :model:`auth.User`
+    and :model:`blog.Post`.
+    """
     # Link te post to the Post model
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments"

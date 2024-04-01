@@ -61,3 +61,29 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
     - Ensure the CLOUDINARY_URL API key is available in our project environment.
 
     - It's important to understand that to retrieve the Cloudinary image URL, we use the .url attribute with the post.featured_image field
+
+# HTML validation
+- W3C validation tool still used
+- Will need to validate by URL
+- Note for user appropriate view, will need to login in and inspect the HTML then copy over to validate
+
+# Javascript, CSS, Lighthouse
+- No change to validation processers
+    - W3C CSS validation
+    - JSHINT validation
+    - Google lighthouses
+
+# Python
+- Continue to use PEP8 code, using the codeinstitute lint checker
+- With imports listing
+    - Standard library
+    - Third-party imports
+    - Local imports
+
+- Docstrings """ ..... """ need to be added to class and functions
+    - In django model class, also to include models that the foreign key is related to.
+        - ":model:'foreign key (auth.User)'"
+    - In django function class
+        - use the same reference as model class. 
+        - Also reference where the data is retrieved from.
+    - REMOVE ALL PRINT CODES!!
