@@ -52,3 +52,6 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
 
 # Crispy Forms
 - pip3 install django-crispy-forms~=2.0 crispy-bootstrap5~=0.7
+
+# Clouidnary
+- pip3 cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15
