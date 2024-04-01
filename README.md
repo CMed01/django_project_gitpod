@@ -80,13 +80,31 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
     - Third-party imports
     - Local imports
 
-- Docstrings """ ..... """ need to be added to class and functions
+- Doc trings """ ..... """ need to be added to class and functions
     - In django model class, also to include models that the foreign key is related to.
         - ":model:'foreign key (auth.User)'"
     - In django function class
         - use the same reference as model class. 
         - Also reference where the data is retrieved from.
     - REMOVE ALL PRINT CODES!!
+
+# How to test Django
+- A unit test is a small individual code that tests individual components or units of the program. 
+- Django's testing library uses the standard Python unittest library. If you've encountered testing in Python before, then a lot of what is here will be familiar to you.
+    - Naming conventions:
+        - Any files that start with the word test_ are considered to be unit test files. These files are executed when we call manage.py with the test argument, i.e. 
+            - python3 manage.py test
+        - All of the test class method names must also begin with test_. It's good practice to give a descriptive name to your testing functions. In our case, we've called this one test_form_is_valid. The name tells us that we expect the test to pass if the form is valid.
+
+| Method                 | Checks that...        |
+| ---------------------- | --------------------- |
+| assertTrue(a)          | a is True             |
+| assertFalse(a)         | a is False            |
+| assertEqual(a, b)      | a == b                |
+| assertNotEqual(a, b)   | a != b                |
+| assertIn(a, b)         | a is in b             |
+| assertNotIn(a, b)      | a is not in b         |
+| assertIsInstance(a, b) | a is an instance of b |
 
 # Useful Links
 - The W3C Markup validation service
