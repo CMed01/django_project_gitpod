@@ -106,6 +106,24 @@ pip3 install dj-database-url~=0.5 psycopg2~=2.9
 | assertNotIn(a, b)      | a is not in b         |
 | assertIsInstance(a, b) | a is an instance of b |
 
+- When running mutliple tests, in the terminal each test is represented by a "."
+    - if three tests the "..."
+    - if a test fails the "." is replaced with a "F"
+    - if there is an error in the test the the "." is replaced with a "E"
+
+- Tests are running in alphabetical order.
+
+- To run specific tests use the following table to isolate tests
+
+| Terminal Command                                                               | Explanation                                                           |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| python3 manage.py test                                                         | Run all tests.                                                        |
+| python3 manage.py test about                                                   | Run all tests in the about app.                                       |
+| python3 manage.py test about.test_forms                                        | Run all tests in the test_forms.py file, in the about app.            |
+| python3 manage.py test about.test_forms. TestCollaborateForm                   | Run all tests in the TestCollaborateForm class in about.test_forms.   |
+| python3 manage.py test about.test_forms.TestCollaborateForm.test_form_is_valid | Run a single test, test_form_is_valid, within the location specified. |
+
+
 # Useful Links
 - The W3C Markup validation service
     - https://validator.w3.org/#validate_by_uri
