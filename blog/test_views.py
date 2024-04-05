@@ -9,6 +9,7 @@ from .models import Post
 class TestBlogViews(TestCase):
 
     def setUp(self):
+        """Set up of data for test"""
         self.user = User.objects.create_superuser(
             username="myUsername",
             password="myPassword",
@@ -19,7 +20,12 @@ class TestBlogViews(TestCase):
                          content="Blog content", status=1)
         self.post.save()
 
+
     def test_render_post_detail_page_with_comment_form(self):
+        """
+        Test for rendering post detail page with a comment 
+        form as an instance
+        """
         response = self.client.get(reverse(
             'post_detail', args=['blog-title']))
         self.assertEqual(response.status_code, 200)
@@ -27,3 +33,20 @@ class TestBlogViews(TestCase):
         self.assertIn(b"Blog content", response.content)
         self.assertIsInstance(
             response.context['comment_form'], CommentForm)
+
+
+    def test_successful_comment_submission(self):
+        """Test for posting a comment on a post"""
+        self.client.login(
+            username="myUsername", password="myPassword")
+            # User name and password matches what was listed in setUp
+        post_data = {
+            'body': 'This is a test comment.'
+        }
+        response = self.client.post(reverse(
+            'post_detail', args=['blog-title']), post_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'Comment submitted and awaiting approval',
+            response.content
+        )
